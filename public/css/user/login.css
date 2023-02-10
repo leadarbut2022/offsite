@@ -1,0 +1,164 @@
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-image: url("img/texture-green-grass-surface-wallpaper-concept\ 1.jpg");
+    background-repeat: no-repeat, repeat;
+    width: 100%;
+    height: 100%;
+    background-color: #002700;
+}
+
+
+/*         nav bar*/
+/* .LIST_NAV{
+    margin-top: -8px;
+    width: 100%;
+    height: 100px;
+    left: 0px;
+    top: 0px;
+    padding: 0px;
+
+    background: #163A5F;
+  
+}
+
+.LIST_NAV ul{
+    position: relative;
+    left: 660px;
+}
+.LIST_NAV ul li{
+   margin: 0px 3px;
+    height: 75px;
+    left: -85px;
+    top: 25px;
+    font-family: 'Tajawal';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 3px;
+    color: #ffffff;
+    position: relative;
+}
+
+.LIST_NAV ul li a{
+    color: #ffffff;
+
+} */
+
+
+/*  end nav bar      */
+
+
+
+
+/*  start body      */
+
+
+
+.div_form{
+    /* background-image: url("../img/texture-green-grass-surface-wallpaper-concept\ 1.jpg");
+    background-repeat: no-repeat, repeat;
+    background-color: #cccccc; */
+    margin: auto;
+    width: 500px;
+    margin-top: 35px;
+    border: none;
+background: none;
+}
+
+.form_description{
+
+    margin: auto;
+    width: 67px;
+    position: relative;
+
+}
+
+.div_form form{
+    text-align: right;
+
+}
+.div_form form label{
+    color: #FFFFFF;
+    margin: 10px 0px;
+}
+
+.div_form form .textfeld{
+    box-sizing: border-box;
+
+ 
+    width: 450px;
+    height: 40px;
+   
+    
+    background: rgba(242, 242, 242, 0.78);
+    border: 3px solid #FFFFFF;
+    border-radius: 25px;
+}
+
+.div_form form .login{
+
+    margin: 14px auto;
+    width: 136px;
+    position: relative;
+    right: 149px;
+    height: 38px;
+        
+}
+
+.div_form .form_heder{
+
+    color: #FFFFFF;
+    margin: 17px auto;
+    width: 191px;
+    position: relative;
+    font-size: 21px;
+    left: 9px;
+    
+}
+
+.div_form a{
+
+    color: #FFFFFF;
+    text-decoration: none;
+
+}
+
+.div_form a :hover{
+
+    color: #FFFFFF;
+    text-decoration: none;
+    
+}
+
+
+.div_form .resetpass{
+   
+    position: relative;
+    display: block;
+    text-align: start;
+    left: 53px;
+
+}
+
+.div_form .createacc{
+    position: relative;
+    display: block;
+    text-align: center;
+    left: 34px;
+    margin-top: 22px;
+  }
+    
+
+
+
+
+
+/* end body    */
+
+
+

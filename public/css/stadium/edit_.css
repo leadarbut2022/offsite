@@ -1,0 +1,113 @@
+.body_edit .button_edit{
+    /* position: relative;
+    left: 94px;
+    top: 13px; */
+
+    padding: 0 0px;
+    width: 31%;
+    height: 31px;
+    border: 1px solid #dadada;
+    color: grey;
+    text-align: justify;
+    outline: none;
+    border: 0px;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: 'Muli', sans-serif;
+    border-radius: 30px;
+    -webkit-border-radius: 29px;
+    left: -107px;
+    top: 13px;
+    position: relative;
+}
+
+/* .body_edit{
+    height: 577px;
+    border-radius: 23px;
+    color: #163A5F;
+    width: 984px;
+    margin: 20px auto;
+    margin: 13px auto;
+    background: rgba(217, 217, 217, 0.5);
+} */
+
+
+
+  .body_edit {
+    height: 906px;
+    border-radius: 23px;
+    color: #163A5F;
+    width: 1001px;
+    margin: 20px auto;
+    margin: 13px auto;
+    background: rgba(217, 217, 217, 0.5);
+    padding-right: 14px;
+    padding-top: 29px;
+  }
+
+.save{
+    margin-top: 277px;
+    width: 173px;
+    height: 44px;
+    position: relative;
+    left: -75px;
+    border-radius: 7px;
+}
+
+
+.from_to{
+    background: aliceblue;
+    padding: 11px 18px;
+    border-radius: 20px;
+    height: 128px;
+
+}
+
+.from_to select{
+    width: 97px;
+    height: 35px;
+    border-radius: 11px;
+}
+
+.from_to input{
+    width: 144px;
+    border-radius: 9px;
+    height: 35px;
+
+}
+
+.phone{
+    width: 321px;
+    height: 43px;
+    border-radius: 12px;
+}
+
+textarea{
+    resize: none;
+    height: 150px;
+    width: 609px;
+    border-radius: 27px;
+    padding: 8px;
+
+}
+
+
+.img_vw{
+    margin: auto;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 90px;
+    overflow: hidden;
+}
+
+.img_vw img{
+    height: 100%;
+    width: 100%;
+}
+
+label{
+    font-size: 22px;
+    padding-right: 14px;
+}

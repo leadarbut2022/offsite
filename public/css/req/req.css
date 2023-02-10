@@ -1,0 +1,76 @@
+.serch{
+
+    width: 451px;
+    margin: auto;
+    height: 41px;
+    
+}
+
+
+    .serch form input{
+        width: 432px;
+        height: 46px;
+        margin: 13px;
+        border-radius: 12px;
+        padding-right: 65px;
+        background: #30C385;
+        color: #163A5F;
+
+
+    }
+
+    .serch form input::placeholder{
+
+        color: #163A5F;
+
+    }
+
+    .serch form button{
+        position: relative;
+        top: -58px;
+        background: none;
+        border: none;
+        left: -21px;
+        width: 30px;
+        height: 44px;
+    }
+
+    .serch form button img{
+    
+        width: 100%;
+    }
+
+
+
+
+
+
+
+    .butt_right{
+        width: 100%;
+        height: 100%;
+        background-color: #163A5F;
+        padding-top: 180px;
+    }
+
+
+    .butt_right button{
+        width: 94%;
+        height: 85px;
+        margin: 2px 6px;
+        background: #30C385;
+        color: black;
+        border-radius: 13px;
+
+    }
+
+
+
+
+
+body{
+
+    background-image: url("img/sl_022120_28320_22 1.png");
+
+
+    }

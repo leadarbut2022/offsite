@@ -1,0 +1,36 @@
+.serch{
+
+    width: 451px;
+    margin: auto;
+    
+}
+
+.serch form{
+    height: 65px;
+}
+
+    .serch form input{
+
+        width: 432px;
+        height: 46px;
+        margin: 13px;
+        border-radius: 38px;
+        padding-right: 65px;
+
+    }
+
+    .serch form button{
+        position: relative;
+        top: -58px;
+        background: none;
+        border: none;
+        left: -21px;
+        width: 30px;
+        height: 44px;
+    }
+
+    .serch form button img{
+    
+        width: 100%;
+    }
+

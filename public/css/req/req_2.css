@@ -1,0 +1,33 @@
+
+.result_2{
+    min-height: 700px;
+
+    width: 92%;
+    margin: 16px auto;
+    border: 2px solid #163A5F;
+    border-radius: 14px;
+    padding: 9px;
+    background-color: #30C385;
+    color: #163A5F;
+
+
+
+}
+
+
+.result_2 .result_item{
+    border-bottom: 2px solid black;
+    margin-top: 8px;
+    padding: 0px 9px;
+}
+
+.result_2 .result_item button{
+    background: none;
+    border: none;
+    margin: 5px 9px;
+
+}
+
+.page1{
+    display: none;
+}

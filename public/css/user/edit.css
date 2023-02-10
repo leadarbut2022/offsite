@@ -1,0 +1,120 @@
+.edit_inform{
+    border-radius: 23px;
+    color: #163A5F;
+    width: 1000px;
+    margin: 20px auto;
+    padding: 58px 29px;
+    background: rgba(217, 217, 217, 0.5);
+}
+.edit_inform .input_edit_prof_img .vw_photo{
+    width: 164px;
+    height: 150px;
+    margin: auto;
+    background: #163A5F;
+    border-radius: 16px;
+    border: 1px solid black;
+    overflow: auto;
+
+}
+.edit_inform .input_edit_prof_img .vw_photo img{
+    width: 75%;
+    height: 75%;
+    border-radius: 63px;
+    margin: 18px 20px;
+    position: relative;
+}
+.edit_inform .input_edit_prof_img  input{
+    /* position: relative;
+    left: 94px;
+    top: 13px; */
+
+    padding: 0 0px;
+    width: 26%;
+    height: 31px;
+    border: 1px solid #dadada;
+    color: grey;
+    text-align: justify;
+    outline: none;
+    border: 0px;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: 'Muli', sans-serif;
+    border-radius: 30px;
+    -webkit-border-radius: 29px;
+    left: -142px;
+    top: 3px;
+    position: relative;
+}
+.edit_inform .input_edit_prof_1 .input_name {
+    border-radius: 10px;
+    width: 267px;
+    height: 37px;
+}
+.edit_inform .input_edit_prof_1 .phone{
+    width: 452px;
+    height: 37px;
+    border-radius: 10px;
+}
+.edit_inform .input_edit_prof_2 .mohawza{
+    
+    width: 48%;
+    height: 37px;
+    border-radius: 10px;
+
+}
+.edit_inform .input_edit_prof_2 .city{
+    border-radius: 10px;
+
+    width: 48%;
+    height: 37px;
+
+    
+}
+.edit_inform .input_edit_prof_3{
+    text-align: center;
+
+}
+.edit_inform .input_edit_prof_3 input{ 
+    border-radius: 10px;
+    top: 26px;
+    border-radius: 10px;
+    width: 150px;
+    height: 37px;
+    position: relative;
+    background: #30C385;
+
+}
+
+.edit_password{
+    width: 800px;
+    border-radius: 23px;
+    color: #163A5F;
+    margin: 20px auto;
+    padding: 58px 29px;
+    background: rgba(217, 217, 217, 0.5);
+}
+
+.edit_password input{
+
+    border-radius: 10px;
+    top: 26px;
+    border-radius: 10px;
+    width: 48% ;
+    height: 37px;
+    position: relative;
+    
+}
+
+.edit_password .btn_submit{
+    border-radius: 10px;
+    background: #30C385;
+
+    top: 26px;
+    border-radius: 10px;
+    width: 150px;
+    height: 37px;
+    position: relative;
+    left: -120px;
+
+}

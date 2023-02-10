@@ -1,0 +1,141 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    
+    /* background-image: url("img/texture-green-grass-surface-wallpaper-concept 1.jpg"); */
+    background-image: url("img/texture-green-grass-surface-wallpaper-concept\ 1.jpg");
+
+    color: white;
+    /* background-color: #30C385; */
+    text-align: right;
+
+}
+
+
+.div_ul_2{
+    display: inline-block;
+}
+
+
+.div_ul_2 {
+    width: 70%;
+  }
+
+
+
+.user_proff{
+
+    width: 45px;
+    border: 2px solid white;
+    border-radius: 23px;
+    height: 45px;
+    margin-top:1px;
+    display: inline-block;
+}
+
+
+
+.user_proff .user_icon{
+    position: relative;
+    font-size: 28px;
+    padding-right: 6px;
+}
+
+
+
+.namepleyr{
+    
+
+        font-size: 22px;
+        padding-left: 19px;
+        margin-top: 3px;
+    
+}
+
+
+
+/* slider                   */
+
+.slider{
+
+    height: 330px;
+    overflow: hidden;
+    width: 90%;
+    margin: 32px auto;
+
+}
+
+.carousel{
+    width: 100%;
+    height: 100%;
+}
+
+.carousel img{
+    width: 100%;
+    height: 342px;
+}
+
+.carousel-item{
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item img{
+    width: 100%;
+    height: 342px;
+}
+
+/* slider                   */
+
+
+
+/*mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
+
+.sectian_catogry{
+
+    background-color: #30C385;
+}
+
+.game{
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 17px;
+    position: relative;
+    height: 272px;
+    overflow: hidden;
+
+}
+.game_img{
+
+
+    width: 100%;
+}
+
+
+.game_img  img{
+
+    height: 210px;
+    width: 100%;
+}
+
+.name_studum{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background: white;
+    color: black;
+    text-align: center;
+}
+
+.footer{
+    height: 340px;
+    background: #163A5F;
+
+}
+
+
+
+/*mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/

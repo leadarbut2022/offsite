@@ -1,0 +1,121 @@
+.bac_body{
+    background-color:  #D9D9D980;
+    margin: 51px 0px;
+    border-radius: 13px;
+    
+
+}
+
+
+.img_stad{
+    background-image: url("img/stad.jpg");
+
+}
+
+.inform_stad h1{
+    display: inline-block;
+    position: relative;
+    /* margin: auto; */
+    right: 33%;
+}
+
+
+.inform_stad .h_from{
+    width: 384px;
+    margin: 9px auto;
+    height: 29px;
+    font-size: 18px;
+    background-color: #D9D9D9;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.inform_stad .h_to{
+    width: 384px;
+    margin: 9px auto;
+    height: 29px;
+    font-size: 18px;
+    background-color: #D9D9D9;
+    border-radius: 12px;
+    text-align: center;
+}
+
+
+.inform_stad p{
+
+    font-size: 19px;
+    position: relative;
+    right: 48px;
+    font-weight: bold;
+
+}
+
+.inform_stad form label{
+    font-size: 21px;
+
+}
+
+.inform_stad form select{
+
+    width: 102px;
+    height: 39px;
+    margin: 0px 9px;
+    border-radius: 8px;
+
+}
+
+.inform_stad form input{
+
+    position: relative;
+    right: 162px;
+    margin-top: 24px;
+    width: 117px;
+    line-height: 36px;
+    border-radius: 9px;
+
+}
+
+
+.inform_stad form button{
+
+    position: relative;
+    right: 162px;
+    margin-top: 24px;
+    width: 117px;
+    line-height: 36px;
+    border-radius: 9px;
+
+}
+
+
+
+
+.row_bac{
+    width: 90%;
+    margin: auto;
+    padding-bottom: 37px;
+}
+
+.bau_std{
+    text-align: right;
+    width: 90%;
+    margin: auto;
+    height: 61px;
+    padding: 5px;
+    background: #D9D9D980;
+    border-radius: 16px;
+}
+
+.tag_a_prise{
+
+    position: relative;
+    width: 151px;
+    height: 29px;
+    background: none;
+    border: 2px solid #D9D9D9;
+    left: -65px;
+    border-radius: 8px;
+    top: 0px;
+    background-color: #D9D9D9;
+
+}
