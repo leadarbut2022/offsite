@@ -7,6 +7,6 @@ A sports site that allows users to book available stadiums in many available spo
 
 #Home 
 
-<img src="h.png">
+<img src="H.png">
 
 
