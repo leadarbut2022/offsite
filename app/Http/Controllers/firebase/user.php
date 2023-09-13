@@ -36,92 +36,89 @@ class user extends Controller
                         }
 
 
-                        public function storeuser(Request $request)     
-                                     {
+                        // public function storeuser(Request $request)     
+                        //              {
 
 
-                                        $request->validate([
-                                            'name_1' =>'required',
-                                            'name_2' =>'required',
-                                            'emails' =>'required',
-                                            'phone'=>'required',
-                                            'password' =>'required',
-                                            'password_v' =>'required',
-                                            'city_' =>'required',
-                                            'stat' =>'required',
+                        //                 $request->validate([
+                        //                     'name_1' =>'required',
+                        //                     'name_2' =>'required',
+                        //                     'emails' =>'required',
+                        //                     'phone'=>'required',
+                        //                     'password' =>'required',
+                        //                     'password_v' =>'required',
+                        //                     'city_' =>'required',
+                        //                     'stat' =>'required',
 
-                                            // 'igree'=>'required',
+                        //                     // 'igree'=>'required',
 
-                                             ]);
+                        //                      ]);
 
 
 
-                                             $name=$request->name_1 .$request->name_2 ;
-                                             $password='';
-                                             if ($request->password !== $request->password_v ) {
-                                                return view('user/auth/regester')->with('stat_add','password not match');
+                        //                      $name=$request->name_1 .$request->name_2 ;
+                        //                      $password='';
+                        //                      if ($request->password !== $request->password_v ) {
+                        //                         return view('user/auth/regester')->with('stat_add','password not match');
                                                 
  
-                                            }
+                        //                     }
 
-                                            $password =$request->password ;
+                        //                     $password =$request->password ;
 
-                                        $firebase = (new Factory)
-                                        ->withServiceAccount(__DIR__.'/offsite-c9bd3-firebase-adminsdk-8z4tk-7bf092c829.json')
-                                        ->withDatabaseUri('https://offsite-c9bd3-default-rtdb.firebaseio.com');
+                        //                 $firebase = (new Factory)
+                        //                 ->withServiceAccount(__DIR__.'/offsite-c9bd3-firebase-adminsdk-8z4tk-7bf092c829.json')
+                        //                 ->withDatabaseUri('https://offsite-c9bd3-default-rtdb.firebaseio.com');
 
-                                     $database = $firebase->createDatabase();
+                        //              $database = $firebase->createDatabase();
 
-                                     $data= [
+                        //              $data= [
                                         
-                                        'name' => $name,
-                                        'emails' => $request->emails,
-                                        'password' =>$password,
-                                        'phone' => $request->phone,
-                                        'city_' => $request->city_,
-                                        'stat' => $request->stat,
+                        //                 'name' => $name,
+                        //                 'emails' => $request->emails,
+                        //                 'password' =>$password,
+                        //                 'phone' => $request->phone,
+                        //                 'city_' => $request->city_,
+                        //                 'stat' => $request->stat,
                                        
-                                        ];
+                        //                 ];
 
-                                   $add= $database->getReference('users')->push($data);
-                                      if ($add ) {
+                        //            $add= $database->getReference('users')->push($data);
+                        //               if ($add ) {
 
-                                       if ($request->password == $request->password_v) {
+                        //                if ($request->password == $request->password_v) {
                           
-                                          $add= users::create(
-                                               [
-                                                    'name' => $name,
-                                                    'email' => $request->emails,
-                                                    'phone' => $request->phone,
-                                                    'password' =>Hash::make( $request->password ),
-                                                    'stat' => $request->stat,
-                                                    'city' => $request->city_,
-                                                   //  'ather_inform' => $request->ather_inform,
+                        //                   $add= users::create(
+                        //                        [
+                        //                             'name' => $name,
+                        //                             'email' => $request->emails,
+                        //                             'phone' => $request->phone,
+                        //                             'password' =>Hash::make( $request->password ),
+                        //                             'stat' => $request->stat,
+                        //                             'city' => $request->city_,
+                        //                            //  'ather_inform' => $request->ather_inform,
                                                     
                                                    
-                                                ]);
+                        //                         ]);
                                            
                                    
-                                          if ($add->false) {
-                                           return back()->withErrors(['كلمه السر والبريد غير منطابقين']);
+                        //                   if ($add->false) {
+                        //                    return back()->withErrors(['كلمه السر والبريد غير منطابقين']);
                                            
-                                          }else{
-                                             return view('user/auth/login')->with('stat_add','تم الانضمام'); 
+                        //                   }else{
+                        //                      return view('user/auth/login')->with('stat_add','تم الانضمام'); 
                                    
-                                          }
+                        //                   }
                                    
-                                       }
-                                     }else{
+                        //                }
+                        //              }else{
 
                                    
-                                        return view('user/auth/regester')->with('stat_add','حدث خطأ');
-                                     }
+                        //                 return view('user/auth/regester')->with('stat_add','حدث خطأ');
+                        //              }
 
 
-                        }
-
-
-
+                        // }
 
 
 
@@ -133,14 +130,16 @@ class user extends Controller
 
 
 
-                        // public function regester(Request $request){
+
+
+
                            public function regester(Request $request){
                            
                    
                            $request->validate([
                                'name_1' =>'required',
                                'name_2' =>'required',
-                               'email' =>'required|unique:users|string|email|max:255',
+                               'email' =>'required',
                                'phone'=>'required',
                                'password' =>'required',
                                'city_' =>'required',
@@ -154,6 +153,32 @@ class user extends Controller
                            $name = $request->name_1 . $request->name_2 ; 
                    
                            if ($request->password == $request->password_v) {
+
+
+
+
+                                        $firebase = (new Factory)
+                                        ->withServiceAccount(__DIR__.'/offsite-c9bd3-firebase-adminsdk-8z4tk-7bf092c829.json')
+                                        ->withDatabaseUri('https://offsite-c9bd3-default-rtdb.firebaseio.com');
+
+                                     $database = $firebase->createDatabase();
+
+                                     $data= [
+                                        
+                                        'name' => $name,
+                                        'emails' => $request->email,
+                                        'password' =>Hash::make( $request->password ),
+                                        'phone' => $request->phone,
+                                        'city_' => $request->city_,
+                                        'stat' => $request->stat,
+                                       
+                                        ];
+
+                                   $add= $database->getReference('users')->push($data);
+
+                                   if (!$add ) {
+                                    return redirect("/");
+                                   }
                           
                           $add= users::create(
                                [
@@ -173,7 +198,29 @@ class user extends Controller
                            return back()->withErrors(['كلمه السر والبريد غير منطابقين']);
                            
                           }else{
-                           return redirect()->route('/')->with('sacsess');   
+
+                           // if (Session()->has('loged_std')) {
+                           //    Session()->pull('loged_std');
+                              
+                           //    Session::flush();
+                           //  }
+
+                           //  $userinfo=users::where('email','=',$request->email)->first();
+
+                           // $request->session()->put('logeduser',$userinfo->id);
+                           // $request->session()->put('nameUser',$userinfo->name);
+                           // $request->session()->put('phoneuser',$userinfo->phone);
+                           // $request->session()->put('mohfzauser',$userinfo->stat);
+                           // $request->session()->put('city_user',$userinfo->city);
+                           // $request->session()->put('ather_infoirmuser',$userinfo->ather_inform);
+                           // $request->session()->put('mailuser',$userinfo->email);
+                     
+                           // $request->session()->put('stat_std_add',1);
+
+                           //   Cookie::queue('email', $request->email, 2629743);
+                           //   Cookie::queue('password', $request->password, 2629743);
+                         
+                           return redirect()->route('login')->with('sacsess');   
                    
                           }
                    
@@ -198,11 +245,12 @@ class user extends Controller
                    
                             ]);
                    
+
                             $userinfo=users::where('email','=',$request->email)->first();
                    
-                            if (!$userinfo) {
-                              return back()->with('fill','thiomthong woring');
-                            }else{
+                           if (!$userinfo) {
+                           return back()->with('fill','thiomthong woring');
+                           }else{
                                if (Hash::check($request->password,$userinfo->password)) {
 
                                  if (Session()->has('loged_std')) {
@@ -219,10 +267,10 @@ class user extends Controller
                                  $request->session()->put('mailuser',$userinfo->email);
                            
                                  $request->session()->put('stat_std_add',1);
-                               //   if($request->has('remember_me')){
+   
                                    Cookie::queue('email', $request->email, 2629743);
                                    Cookie::queue('password', $request->password, 2629743);
-                               //   }
+                               
                    
                    
                                  
@@ -248,8 +296,19 @@ class user extends Controller
                    
                        if (Session()->has('logeduser')) {
                            Session()->pull('logeduser');
-                           // Session()->pull('numroes');
-                           Session::flush();
+                          //  Session()->forget('my_key');
+                          //  Session::flush();
+
+                          session()->forget([
+                            'logeduser',
+                            'nameUser',
+                            'phoneuser',
+                            'mohfzauser',
+                            'city_user',
+                            'ather_infoirmuser',
+                            'mailuser'
+                        ]);
+                    
                            
                            return redirect('login');
                        }

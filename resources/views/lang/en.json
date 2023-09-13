@@ -1,0 +1,48 @@
+
+{
+   
+    "home": "Home",
+    "Qat": "Categories",
+    "Dash": " Dashboard ",
+    "log_std": "Service Provider Login",
+    "log_user": "User Login",
+    "Add_std": "Please add a stadium",
+    "avelb_spor": "Available Sports",
+    "more": "More",
+    "footbal": "Football",
+    "tens": "Tennis",
+    "padel": "Paddle",
+    "backet": "Basketball",
+    "scwash": "Squash",
+    "volyball": "Volleyball",
+    "pawend": "Pound",
+    "Email": "Email",
+    "password": "Password",
+    "forget_pass": "Forgot Password?",
+    "login": "Log in",
+    "uDontHaveAcc": "Don't have an account? Create one.",
+    "reg_std": "Join as a service provider",
+    "f_name": "First Name",
+    "s_name": "Last Name",
+    "phone": "Phone Number",
+    "city": "City",
+    "v_pass": "Confirm Password",
+    "gafranator": "Province",
+    "createAcc": "Create Account",
+    "uHaveAcc": "Already have an account? Log in",
+    "reg_user": "Join as a player",
+    "vew_pass": "Show Password",
+    "site_sochail": "Social Media",
+    "reg_naw":"Register Now"  
+
+
+
+
+
+
+
+
+
+}
+
+

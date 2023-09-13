@@ -53,12 +53,12 @@
 <div class="container">
 
     <div class="valdate_form">
-        <h1>تأكيد الحجز</h1>
-        <b> المبلغ الكلي<span> {{ $prodect->prise }} </span></b>
+        <h1> {{ __('valdate_res') }}</h1>
+        <b>{{ __('all_mony') }}<span> {{ $prodect->prise }} </span></b>
 <br>
 <br>
 
-        <b>الرجاء ارسال مبلغ 50 جنيه جدية حجز علي الرقم التالي</b>
+        <b>{{ __('sen50poend') }}</b>
         <br>
         <label>0{{ $addstdstats->phone }}</label>
         <br>
@@ -66,12 +66,12 @@
         <form action="valdate_hagz" method="POST">
             
             @csrf
-            <b> الرقم المرسل منه</b>
+            <b>{{ __('phone_sender') }}</b>
             <br>
             <br>
             <input type="hidden" name="id_hagez" class="text_feld"  value="{{ $prodect->id }}" id="">
             <input type="text" name="num_user" class="text_feld" id=""><br><br>
-            <input type="submit" class="sibmit" value="تأكيد"><br>
+            <input type="submit" class="sibmit" value="{{ __('valdate') }}"><br>
         </form>
     </div>
     <br>

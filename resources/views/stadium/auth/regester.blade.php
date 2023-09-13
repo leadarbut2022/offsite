@@ -26,23 +26,25 @@
             <img src="../img/b323c772-df2c-4dba-8ac0-c37869e37f65 1.png" alt="">
 
         </div>
-        <div class="form_heder" style="left: 29px;">الانضمام كمقدم خدمة</div>
+        <div class="form_heder" style="left: 29px;" {{ __('reg_std') }}></div>
         <form action="registrationstd" method="post">
             @csrf
 
 
             <div class="row">
                 <div class="col-md-6">
-                    <label for="">الاسم الثاني</label>
+                    <label for="">{{ __('f_name') }}</label>
                     <input type="text" name="name_2" class="textfeld"><br>
-                    <label for=""> رقم الهاتف</label>
+                    <label for=""> {{ __('phone') }}</label>
                     <input type="text" name="phone" class="textfeld"><br>
-                    <label for="">المدينة</label>
-                    <select name="city" id="">
-                        <option value="الشروق">الشروق</option>
-                        <option value="السلام">السلام</option>
-                    </select>
-                    <label for="">تأكيد كلمة السر </label>
+                    <label for="">{{ __('city') }}</label>
+                                       <input type="text" name="city" class="textfeld"><br>
+
+                    <!--<select name="city" id="">-->
+                    <!--    <option value="الشروق">الشروق</option>-->
+                    <!--    <option value="السلام">السلام</option>-->
+                    <!--</select>-->
+                    <label for="">{{ __('v_pass') }}</label>
                     <input type="text" name="pass_v" class="textfeld"><br>
                     {{-- <label for="">  العنوان بالتفصيل </label>
                     <input type="text" name="ather_inform" class="textfeld"><br>
@@ -55,17 +57,19 @@
                     </select> --}}
                 </div>
                 <div class="col-md-6">
-                       <label for="">الاسم الاول</label>
+                       <label for=""> {{ __('s_name') }}</label>
                     <input type="text" name="name_1" class="textfeld"><br>
-                    <label for=""> البريد الاليكتروني</label>
+                    <label for=""> {{ __('Email') }}</label>
                     <input type="text" name="email" class="textfeld"><br>
-                    <label for=""> المحافظة</label>
-                   
-                    <select name="stat" id="">
-                        <option value="القاهره">القاهره</option>
-                        <option value="الاسكندريه"> الاسكندريه</option>
-                    </select>
-                    <label for="">  كلمة السر</label>
+                    <label for=""> {{ __('gafranator') }}</label>
+                   <input type="text" name="stat" class="textfeld"><br>
+                    <!--<select name="stat" id="">-->
+                    <!--    <option value="القاهره">القاهره</option>-->
+                    <!--    <option value="الاسكندريه"> الاسكندريه</option>-->
+                    <!--</select>-->
+                    
+                    
+                    <label for="">{{ __('password') }}</label>
                     <input type="text" name="password" class="textfeld"><br>
 
                     {{-- <label for="">   اسم الملعب</label>
@@ -85,10 +89,10 @@
             <label for="">  كلمة السر</label>
             <input type="text" name="password"  class="textfeld"><br>-->
            
-         <div class="col-md-12">  <input type="submit" class="login" value="انشاء حساب"></div> 
+         <div class="col-md-12">  <input type="submit" class="login" value="{{ __('createAcc') }} "></div> 
 
 
-         <label class="resetpass" for=""><a href="login-stadium"> تملك حساب ..؟ , تسجيل الدخول </a></label> 
+         <label class="resetpass" for=""><a href="login-stadium">{{ __('uHaveAcc') }}  </a></label> 
         </div>
 
 

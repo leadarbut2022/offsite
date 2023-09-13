@@ -15,6 +15,10 @@ body{
 }
 
 
+.headersports {
+    font-size: 26px;
+}
+
 .div_ul_2{
     display: inline-block;
 }
@@ -49,9 +53,9 @@ body{
 .namepleyr{
     
 
-        font-size: 22px;
-        padding-left: 19px;
-        margin-top: 3px;
+    font-size: 22px;
+    padding-left: 19px;
+    margin: 3px 20px;
     
 }
 

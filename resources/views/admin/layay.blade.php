@@ -151,10 +151,19 @@
                     </a> <br>
 
 
-              <a href="edditStd">  <button style="" id="req_chin_2" onclick="req_chin_2()">
+              {{-- <a href="edditStd">  <button style="" id="req_chin_2" onclick="req_chin_2()">
                 <img style="    width: 29px;
                     " src="img/home2.png" alt="">
                                     <h6>اعدادات عامة</h6>
+
+                    </button>
+              </a> --}}
+
+
+              <a href="signOutAdmin">  <button style="" id="req_chin_2" onclick="req_chin_2()">
+                <img style="    width: 29px;
+                    " src="img/home2.png" alt="">
+                                    <h6> تسجيل الخروج</h6>
 
                     </button>
               </a>

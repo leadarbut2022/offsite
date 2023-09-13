@@ -28,16 +28,26 @@ class HagezController extends Controller
             'year' => 'required',
             
            
-             ]);
+        ],[
+                'from.required' => 'The from  field is required.',
+                'to.required' => 'The to  field is required.',
+                'prise.required' => 'The prise  field is required.',
+                'day.required' => 'The day  field is required.',
+                'manth.required' => 'The manth  field is required.',
+                'year.required' => 'The year  field is required.',
+                
+                // ...
+            ]);
              $i_=$request->id_user;
              $i_2=$request->id_std;
              $zero=0;
-             $chek= hagez_end::where('id_user', '=', $i_)->where('stat_', '=', $zero)->where('id_p', '=', $i_2)->count();
+            //  $chek= hagez_end::where('id_user', '=', $i_)->where('stat_', '=', $zero)->where('id_p', '=', $i_2)->count();
 
-                if ( $chek > 0) {
-                    return redirect()->back()->with('in_prosses','لديك حجز تحت التأكيد');
+            //     if ( $chek > 0) {
+                    
+            //         return redirect()->back()->with('in_prosses','لديك حجز تحت التأكيد');
 
-                }
+            //     }
 
                 // `id`, `id_user`, `id_p`, `from`, `to`, `prise`, `remember_token`, `created_at`, `updated_at`, `maney_h`, `phone_user`, `stat_`, `name_std`, `name_plyer`, `date_`, `day`, `month`, `year_`, `to_date`, `to_month`, `to_year`
                 // $chek_date= hagez_end::where('id_user', '=', $i_)->where('stat_', '=', 1)->where('id_p', '=', $i_2)->where('id_p', '=', $i_2)->where('id_p', '=', $i_2)->->where('id_p', '=', $i_2)->->where('id_p', '=', $i_2)->->->count();

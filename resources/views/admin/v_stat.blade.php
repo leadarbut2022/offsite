@@ -98,7 +98,7 @@
                         <div class="row">
         
                         
-        
+{{--         
                             <div class="col-md-3">
         
                                  <form action="update_req_from_std" method="POST">
@@ -108,7 +108,7 @@
         
                                       <button type="submit" class="btn-success" name="delet"> تعديل</button>
                                 </form>
-                            </div>
+                            </div> --}}
                         </div></th>
         
                             <th scope="row">
@@ -119,9 +119,9 @@
         
                                 <div class="col-md-3">
         
-                                                <form action="delet_req_from_std" method="POST">
+                                                <form action="delet_user_from_admin" method="POST">
                                                     @csrf
-                                                            <input type="hidden" name="id_hagz" value="{{ $va->id }}">             
+                                                            <input type="hidden" name="id_" value="{{ $va->id }}">    
                                                             <button type="submit" class="btn-danger" name="edit"> <img src="img/remove.png" alt=""></button>
                                                 </form>
                         
@@ -181,7 +181,7 @@
     
                     
     
-                        <div class="col-md-3">
+                        {{-- <div class="col-md-3">
     
                              <form action="update_req_from_std" method="POST">
                                       @csrf
@@ -190,7 +190,7 @@
     
                                   <button type="submit" class="btn-success" name="delet"> تعديل</button>
                             </form>
-                        </div>
+                        </div> --}}
                     </div></th>
     
                         <th scope="row">
@@ -201,9 +201,11 @@
     
                             <div class="col-md-3">
     
-                                            <form action="delet_req_from_std" method="POST">
+                                            <form action="delet_std_from_admin" method="POST">
                                                 @csrf
-                                                        <input type="hidden" name="id_hagz" value="{{ $va->id }}">             
+         
+                                                        <input type="hidden" name="id" value="{{ $va->id }}">             
+                                                        <input type="hidden" name="id_" value="{{ $va->id_ }}">             
                                                         <button type="submit" class="btn-danger" name="edit"> <img src="img/remove.png" alt=""></button>
                                             </form>
                     
@@ -267,7 +269,7 @@
 
                 
 
-                    <div class="col-md-3">
+                    {{-- <div class="col-md-3">
 
                          <form action="update_req_from_std" method="POST">
                                   @csrf
@@ -276,7 +278,7 @@
 
                               <button type="submit" class="btn-success" name="delet"> تعديل</button>
                         </form>
-                    </div>
+                    </div> --}}
                 </div></th>
 
                     <th scope="row">
@@ -287,9 +289,9 @@
 
                         <div class="col-md-3">
 
-                                        <form action="delet_req_from_std" method="POST">
+                                        <form action="delet_req_from_admin" method="POST">
                                             @csrf
-                                                    <input type="hidden" name="id_hagz" value="{{ $va->id }}">             
+                                                    <input type="hidden" name="id" value="{{ $va->id }}">             
                                                     <button type="submit" class="btn-danger" name="edit"> <img src="img/remove.png" alt=""></button>
                                         </form>
                 

@@ -1,0 +1,65 @@
+
+{
+   
+    "home": "Home",
+    "Qat": "Categories",
+    "Dash": " Dashboard ",
+    "log_std": "Service Provider Login",
+    "log_user": "User Login",
+    "Add_std": "Please add a stadium",
+    "avelb_spor": "Available Sports",
+    "more": "More",
+    "footbal": "Football",
+    "tens": "Tennis",
+    "padel": "Paddle",
+    "backet": "Basketball",
+    "scwash": "Squash",
+    "volyball": "Volleyball",
+    "pawend": "Pound",
+    "Email": "Email",
+    "password": "Password",
+    "forget_pass": "Forgot Password?",
+    "login": "Log in",
+    "uDontHaveAcc": "Don't have an account? Create one.",
+    "reg_std": "Join as a service provider",
+    "f_name": "First Name",
+    "s_name": "Last Name",
+    "phone": "Phone Number",
+    "city": "City",
+    "v_pass": "Confirm Password",
+    "gafranator": "Province",
+    "createAcc": "Create Account",
+    "uHaveAcc": "Already have an account? Log in",
+    "reg_user": "Join as a player",
+    "vew_pass": "Show Password",
+    "site_sochail": "Social Media",
+    "reg_naw":"Register Now"  ,
+
+
+    "sen50poend":"Please send a serious booking amount of 50 EGP to the following number",
+    "phone_sender":"Sender number",
+    "valdate":"Validate",
+    "valdate_res":"Booking Confirmation",
+    "all_mony":"Total amount",
+    "name_std":"Stadium name",
+    "from_to_work":"Working hours from",
+    "to":"to",
+    "clock_prise":"Hourly price",
+    "choise_date":"Choose a date",
+    "day":"Day",
+    "month":"Month",
+    "year":"Year",
+    "from_cloick":"From time",
+    "many_cloick":"Number of hours",
+    "std_addres":"Stadium address",
+    "std_sagest":"Suggested stadiums"
+    
+
+
+
+
+
+
+}
+
+

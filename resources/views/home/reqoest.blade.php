@@ -151,7 +151,7 @@
                                                 <tr>
                                                     <th scope="row">
                             
-                                                        <form action="delet_req_from_std" method="POST">
+                                                        <form action="delet_req" method="POST">
                                                             @csrf
                                                                     <input type="hidden" name="id_hagz" value="{{ $va->id }}">             
                                                                     <button class="bx" type="submit" name="edit"> <img src="img/remove.png" alt=""></button>
@@ -228,6 +228,16 @@
                                             border-radius: 8px;
                                             background-color: red;
                                         }
+
+
+                                     .bxr{
+                                            background: none;
+                                            border: none;
+                                        }
+
+                                        .bxr .like{
+                                            font-size: 23px;
+                                        }
                                     </style>
                             
                                     <tbody>
@@ -237,12 +247,13 @@
                             
                                                 <tr>
                                                     <th scope="row">
-                            
-                                                        {{-- <form action="delet_req_from_std" method="POST">
+                                                        <form action="rate_action" method="POST">
                                                             @csrf
+                                                            {{-- <b><i class="ri-thumb-up-fill"></i></b> --}}
                                                                     <input type="hidden" name="id_hagz" value="{{ $va->id }}">             
-                                                                    <button class="bx" type="submit" name="edit"> <img src="img/remove.png" alt=""></button>
-                                                        </form> --}}
+                                                                    {{-- <button class="bx" type="submit" name="edit"> <img src="img/remove.png" alt=""></button> --}}
+                                                                    {{-- <button type="submit" class="bxr"><b class="like"><i class="ri-thumb-up-fill"></i></b></button> --}}
+                                                        </form>
                                                     </th>
                                                     <td>{{ $va->maney_h }}</td>
                                                     <td>{{ $va->to }}</td>

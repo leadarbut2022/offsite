@@ -29,17 +29,17 @@ body{
             <img src="../img/b323c772-df2c-4dba-8ac0-c37869e37f65 1.png" alt="">
 
         </div>
-        <div class="form_heder">تسجيل الدخول كلاعب </div>
+        <div class="form_heder">  {{ __('log_user') }} </div>
         <form action="loginuser" method="post">
         @csrf
-                <label for="">البريد الاليكتروني</label>
+                <label for="">{{ __('Email') }} </label><br>
             <input type="text" name="email" value="{{ Cookie::get('email'); }}" class="textfeld"><br>
-            <label for="">  كلمة السر</label>
+            <label for="">  {{ __('password') }} </label>
             <input type="text" name="password" value="{{ Cookie::get('password'); }}"  class="textfeld"><br>
-            <label class="resetpass" for="">  نسيت كلمه السر ..؟</label>
-            <input type="submit" class="login" value="تسجيل الدخول">
+            <label class="resetpass" for=""> {{ __('forget_pass') }}</label>
+            <input type="submit" class="login" value="{{ __('login') }} ">
 
-            <label class="createacc" for=""> <a href="regester"> لا تملك حساب ..؟ , انشاء حساب  </a> </label>
+            <label class="createacc" for=""> <a href="regester"> {{ __('uDontHaveAcc') }} </a> </label>
 
 
 

@@ -21,10 +21,15 @@
 
     .row_bac{
             background-color: #D9D9D97A;
-            height: 303px;
+            min-height: 303px;
             padding: 17px 1px;
             border-radius: 14px;
         }
+        
+        .vstd{
+            margin: 10px 0px 10px 0px;
+        }
+        
 </style>
             <div class="container">
 
@@ -62,15 +67,15 @@
                                 @foreach ($prodect as $std )
 
 
-                                <div class="col-md-3">
+                                <div class="col-md-3 vstd">
 
                                         <div class="game">
                                             <div class="game_img">
                                                 <img src="{{ $std->img }}" alt="">
                                             </div>
                                             <div class="name_studum">
-                                               <a href="resev?id={{  $std->id_ }}"> <h3>{{ $std->name }} </h3></a>
-                                                <b><i class="ri-star-line"></i></b>
+                                               <a  href="resev?id={{  $std->id_ }}" style="color: black;"> <h3>{{ $std->name }} </h3></a>
+                                                <b>{{ $std->prise }}</b>
                                             </div>
                                         </div>   
                                 </div>

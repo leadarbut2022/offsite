@@ -90,10 +90,12 @@ background: none;
 .div_form form .textfeld{
     box-sizing: border-box;
 
- 
+    padding-left: 9px;
+    padding-right: 13px;
     width: 450px;
     height: 40px;
-   
+    text-align: right;
+
     
     background: rgba(242, 242, 242, 0.78);
     border: 3px solid #FFFFFF;
@@ -114,10 +116,11 @@ background: none;
 
     color: #FFFFFF;
     margin: 17px auto;
-    width: 191px;
+    width: 200px;
     position: relative;
     font-size: 21px;
     left: 9px;
+    text-align: center;
     
 }
 

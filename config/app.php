@@ -95,7 +95,17 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => ['en', 'ar'],
+    
+    // تحديد اللغات المتوفرة
+    'locales' => ['en', 'ar'],
+    'available_locales' => [
+        'en', 'ar'
+    ],
+    // استخدام ملفات الترجمة
+    // يجب وضع الملفات في مسار المورد resources/lang/{locale}
+    // مثال: resources/lang/en/messages.php
+    'translation' => true,
 
     /*
     |--------------------------------------------------------------------------

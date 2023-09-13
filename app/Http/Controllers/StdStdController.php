@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\hagez_end;
+use App\Models\rate;
 use App\Models\std_std;
 use App\Models\users;
 use App\Models\users_std;
-use Carbon\Carbon;
+// use Carbon\Carbon;
 use Illuminate\Support\Facades\Hash;
+use Carbon\Carbon;
+
 
 use Illuminate\Http\Request;
 
@@ -38,10 +41,10 @@ class StdStdController extends Controller
              if ($request->hasFile('img')) {
                 $filename=$request->img;
                 $new_fill=time().$filename->getClientOriginalName();
-                $filename->move(public_path('img/std/'),$new_fill);
+                $filename->move(public_path('../img/std/'),$new_fill);
             } 
 
-        $add= std_std::create(
+       $add=  std_std::create(
             [
                  'name' =>$request->name,
                  'address' => $request->address,
@@ -60,7 +63,8 @@ class StdStdController extends Controller
              ]);
 
 
-
+             $addstdstats=std_std::where('id_user','=',$request->id_user)->first();
+             $request->session()->put('stat_std_add',@$addstdstats->id_);
 
              if ($add->false) {
                 return back()->withErrors(['كلمه السر والبريد غير منطابقين']);
@@ -122,12 +126,12 @@ class StdStdController extends Controller
         $searchTerm_5 = 5;
         $searchTerm_6 = 6;
         
-        $prodect_1=std_std::query()->where('type', 'LIKE', "%{$searchTerm_1}%")->latest()->paginate(20);
-        $prodect_2=std_std::query()->where('type', 'LIKE', "%{$searchTerm_2}%")->latest()->paginate(20);
-        $prodect_3=std_std::query()->where('type', 'LIKE', "%{$searchTerm_3}%")->latest()->paginate(20);
-        $prodect_4=std_std::query()->where('type', 'LIKE', "%{$searchTerm_4}%")->latest()->paginate(20);
-        $prodect_5=std_std::query()->where('type', 'LIKE', "%{$searchTerm_5}%")->latest()->paginate(20);
-        $prodect_6=std_std::query()->where('type', 'LIKE', "%{$searchTerm_6}%")->latest()->paginate(20);
+        $prodect_1=std_std::query()->where('type', 'LIKE', "%{$searchTerm_1}%")->latest()->paginate(4);
+        $prodect_2=std_std::query()->where('type', 'LIKE', "%{$searchTerm_2}%")->latest()->paginate(4);
+        $prodect_3=std_std::query()->where('type', 'LIKE', "%{$searchTerm_3}%")->latest()->paginate(4);
+        $prodect_4=std_std::query()->where('type', 'LIKE', "%{$searchTerm_4}%")->latest()->paginate(4);
+        $prodect_5=std_std::query()->where('type', 'LIKE', "%{$searchTerm_5}%")->latest()->paginate(4);
+        $prodect_6=std_std::query()->where('type', 'LIKE', "%{$searchTerm_6}%")->latest()->paginate(4);
   
         return view('home/home',compact('prodect_1','prodect_2','prodect_3','prodect_4','prodect_5','prodect_6',));
     }
@@ -143,23 +147,23 @@ class StdStdController extends Controller
 
         if($i==1){ 
             $searchTerm=1;
-            $prodect= std_std::query()->where('type', 'LIKE', "%{$searchTerm}%")->latest()->paginate(4);
+            $prodect= std_std::query()->where('type', 'LIKE', "%{$searchTerm}%")->latest()->paginate(20);
            
         }elseif($i==2){
             $searchTerm=2;
-            $prodect= std_std::query()->where('type', 'LIKE', "%{$searchTerm}%")->latest()->paginate(4);
+            $prodect= std_std::query()->where('type', 'LIKE', "%{$searchTerm}%")->latest()->paginate(20);
         }elseif($i==3){
             $searchTerm=3;
-            $prodect= std_std::query()->where('type', 'LIKE', "%{$searchTerm}%")->latest()->paginate(4);
+            $prodect= std_std::query()->where('type', 'LIKE', "%{$searchTerm}%")->latest()->paginate(20);
         }elseif($i==4){
             $searchTerm=4;
-            $prodect= std_std::query()->where('type', 'LIKE', "%{$searchTerm}%")->latest()->paginate(4);
+            $prodect= std_std::query()->where('type', 'LIKE', "%{$searchTerm}%")->latest()->paginate(20);
         }elseif($i==5){ 
             $searchTerm=5;
-            $prodect= std_std::query()->where('type', 'LIKE', "%{$searchTerm}%") ->latest()->paginate(4);
+            $prodect= std_std::query()->where('type', 'LIKE', "%{$searchTerm}%") ->latest()->paginate(20);
         }elseif($i==6){ 
             $searchTerm=6;
-            $prodect= std_std::query()->where('type', 'LIKE', "%{$searchTerm}%") ->latest()->paginate(4);
+            $prodect= std_std::query()->where('type', 'LIKE', "%{$searchTerm}%") ->latest()->paginate(20);
         }else{
             $prodect=std_std::latest()->paginate(20);
         }
@@ -183,14 +187,29 @@ class StdStdController extends Controller
         $addstdstats_user=std_std::where('id_user','=',$iduser) ->first();
         $id_std=$addstdstats_user->id_ ;
 
+
+        $currentTime = Carbon::now();
+
+        // dd( $currentTime->toArray());
+        $arr= $currentTime->toArray();
+      $er= $arr['year'];
+      $mon= $arr['month'];
+      $day= $arr['day'];
+    //    echo $er .$mon .$day;
+
+    //    `day`, `month`, `year_`
         // $num_selers=users::count();
-        $num_hagz=hagez_end::where('id_p','=',$id_std)->where('created_at', '>', now()->subDays(1)->endOfDay())->count();
+        $num_hagz=hagez_end::where('id_p','=',$id_std)->where('day','=',$day)->where('month','=', $mon )->where('year_','=', $er )->count();
         $num_hagz_ned=hagez_end::where('id_p','=',$id_std)->where('stat_','=', 0 )->count();
-        $num_hagz_all=hagez_end::where('id_p','=',$id_std)->where('stat_','=', 1 )->count();
+        $num_hagz_all=hagez_end::where('id_p','=',$id_std)->count();
 
         return view('stadium/profile',compact('num_hagz','num_hagz_ned','num_hagz_all'));
         
     }
+
+
+
+  
 
 
 
@@ -226,6 +245,15 @@ class StdStdController extends Controller
         $addstdstats_user=std_std::where('id_user','=',$iduser) ->first();
         $id_std=$addstdstats_user->id_ ;
         $one=0;
+        $currentTime = Carbon::now();
+
+        // dd( $currentTime->toArray());
+        $arr= $currentTime->toArray();
+      $er= $arr['year'];
+      $mon= $arr['month'];
+      $day= $arr['day'];
+
+
         $addstdstats=hagez_end::where('id_p','=',$id_std)->where('stat_','=',$one)->latest()->get();
          
 
@@ -248,7 +276,16 @@ class StdStdController extends Controller
 
         $addstdstats_user=std_std::where('id_user','=',$iduser) ->first();
         $id_std=$addstdstats_user->id_ ;
-        $addstdstats=hagez_end::where('id_p','=',$id_std)->where('stat_','=', 1 )->where('created_at', '>', now()->subDays(1)->endOfDay()) ->latest()->get();
+
+        $currentTime = Carbon::now();
+
+        // dd( $currentTime->toArray());
+        $arr= $currentTime->toArray();
+      $er= $arr['year'];
+      $mon= $arr['month'];
+      $day= $arr['day'];
+
+        $addstdstats=hagez_end::where('id_p','=',$id_std)->where('id_p','=',$id_std)->where('day','=',$day)->where('month','=', $mon )->where('year_','=', $er ) ->latest()->get();
          
         // ->where('stat_','=',$one)
   
@@ -385,8 +422,110 @@ class StdStdController extends Controller
 
       }
 
-      
 
+      public function rateaction(Request $request){
+                   
+      
+      
+        $regestersuccess='';
+        $emailexets='';
+        $users = rate::where('id_user', $request->id_user)->where('id_std', $request->id_std)->where('rate', true)->get();
+
+        # check if email is more than 1
+
+        if(sizeof($users) > 0){
+            # tell user not to duplicate same email
+            $emailexets=true;
+            return redirect('');
+            
+        }
+
+
+        $iduser=$request->id_user;
+        $idstd=$request->idstd;
+        
+       
+          rate::create(
+            [
+                 'id_user' =>$request->name,
+                 'id_std' => $request->address,
+                 'rate' => $request->phone,
+             
+               
+                 
+                
+             ]);
+
+       
+        return  redirect('');       
+
+       
+        
+       
+
+      }
+
+      
+      
+      public function updatestd (Request $request){
+
+
+
+
+        $request->validate([
+            'id'=>'required',
+            'name' =>'required',
+            'address' =>'required',
+            'phone'=>'required',
+            'from_' =>'required',
+            'to_' =>'required', 
+            'prise' =>'required',
+            'std_inf' =>'required',
+            'id_user' =>'required',
+            'img' =>'required',
+            'type' =>'required',
+            // 'name_studam'=>'required',
+            // 'many_players'=>'required',
+            // 'type_std'=>'required',
+             ]);
+
+
+             if ($request->hasFile('img')) {
+                $filename=$request->img;
+                $new_fill=time().$filename->getClientOriginalName();
+                $filename->move(public_path('../img/std/'),$new_fill);
+            } 
+
+       $add=  std_std::where('id_','=',$request->id)->update(
+            [
+                 'name' =>$request->name,
+                 'address' => $request->address,
+                 'phone' => $request->phone,
+                 'from_' => $request->from_,
+                 'to_' => $request->to_,
+                 'prise' => $request->prise,
+                 'std_inf' => $request->std_inf,
+                 'id_user' => $request->id_user,
+                 'img' => 'img/std/'.$new_fill,
+                 'type' => $request->type,
+                 
+               
+                 
+                
+             ]);
+
+
+             $addstdstats=std_std::where('id_user','=',$request->id_user)->first();
+             $request->session()->put('stat_std_add',@$addstdstats->id_);
+
+             if (!$add) {
+                return back()->withErrors(['كلمه السر والبريد غير منطابقين']);
+                
+               }else{
+                return redirect()->route('v_stat_std')->with('sacsess');   
+        
+               }
+    }
 
      
 }

@@ -87,7 +87,8 @@ background: none;
 .div_form form .textfeld{
     box-sizing: border-box;
 
- 
+    padding-left: 9px;
+    padding-right: 13px;
     width: 450px;
     height: 40px;
    

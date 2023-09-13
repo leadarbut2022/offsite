@@ -81,7 +81,7 @@
 
                                     <div class="col-md-12" style="text-align:center;">
 
-                                    <h1>الرياضات المتاحة</h1>
+                                    <h1>  {{ __('avelb_spor') }} </h1>
 
                                     </div>
                                 </div>
@@ -89,11 +89,13 @@
                                 <div class="row">
 
                                     <div class="col-md-6" style="text-align:start;">
-                                        <a href="v_qat?id=1"><b> المزيد</b></a>
+                                        <b class="headersports" > {{ __('footbal') }}</b>
+
 
                                     </div>
                                     <div class="col-md-6" style="text-align:end;">
-                                                <b>كرة القدم</b>
+                                        <a href="v_qat?id=1"><b> {{ __('more') }}</b></a>
+
                                     </div>
 
                                 </div>
@@ -111,7 +113,11 @@
                                                 </div>
                                                 <div class="name_studum">
                                                    <h3> <a style="color: black" href="resev?id={{  $std->id_ }}">{{ $std->name }}</a></h3>
-                                                    <b><i class="ri-star-line"></i></b>
+                                                  <b style="text-align:left;position: relative;
+                                                  left: -63px;
+                                                  top: -2px;">{{ __('pawend') }}</b><b style="position: relative;
+right: -39px;">{{ $std->prise }}</b>
+
                                                 </div>
                                             </div>   
                                     </div>
@@ -158,11 +164,14 @@
                             <div class="row">
 
                                 <div class="col-md-6" style="text-align:start;">
-                                 <a href="">   <b> المزيد</b></a>
+                                 <b class="headersports">{{ __('tens') }} </b>
+
 
                                 </div>
                                 <div class="col-md-6" style="text-align:end;">
-                                            <b>تنس </b>
+
+                                    <a href="v_qat?id=2">   <b> {{ __('more') }}</b></a>
+
                                 </div>
 
                             </div>
@@ -181,7 +190,10 @@
                                             </div>
                                             <div class="name_studum">
                                                <h3> <a style="color: black" href="resev?id={{  $std->id_ }}">{{ $std->name }}</a></h3>
-                                                <b><i class="ri-star-line"></i></b>
+                                               <b style="text-align:left;position: relative;
+                                               left: -63px;
+                                               top: -2px;">{{ __('pawend') }}</b><b style="position: relative;
+right: -39px;">{{ $std->prise }}</b>
                                             </div>
                                         </div>   
                                 </div>
@@ -213,11 +225,13 @@
                             <div class="row">
 
                                 <div class="col-md-6" style="text-align:start;">
-                                    <a href=""> <b> المزيد</b></a>
+                                    <b class="headersports">{{ __('padel') }} </b>
+
 
                                 </div>
                                 <div class="col-md-6" style="text-align:end;">
-                                            <b>بادل </b>
+                                    <a href="v_qat?id=3"> <b> {{ __('more') }}</b></a>
+
                                 </div>
 
                             </div>
@@ -236,7 +250,10 @@
                                             </div>
                                             <div class="name_studum">
                                                <h3> <a style="color: black" href="resev?id={{  $std->id_ }}">{{ $std->name }}</a></h3>
-                                                <b><i class="ri-star-line"></i></b>
+                                               <b style="text-align:left;position: relative;
+                                               left: -63px;
+                                               top: -2px;">{{ __('pawend') }}</b><b style="position: relative;
+right: -39px;">{{ $std->prise }}</b>
                                             </div>
                                         </div>   
                                 </div>
@@ -270,11 +287,14 @@
                             <div class="row">
 
                                 <div class="col-md-6" style="text-align:start;">
-                                  <a href="">  <b> المزيد</b></a>
+
+                                    <b class="headersports" >  {{ __('backet') }}  </b>
+
 
                                 </div>
                                 <div class="col-md-6" style="text-align:end;">
-                                            <b>كرة السلة</b>
+                                    <a href="v_qat?id=4">  <b> {{ __('more') }}</b></a>
+
                                 </div>
 
                             </div>
@@ -293,7 +313,10 @@
                                             </div>
                                             <div class="name_studum">
                                                <h3> <a style="color: black" href="resev?id={{  $std->id_ }}">{{ $std->name }}</a></h3>
-                                                <b><i class="ri-star-line"></i></b>
+                                               <b style="text-align:left;position: relative;
+                                               left: -63px;
+                                               top: -2px;">{{ __('pawend') }}</b><b style="position: relative;
+right: -39px;">{{ $std->prise }}</b>
                                             </div>
                                         </div>   
                                 </div>
@@ -326,11 +349,12 @@
                             <div class="row">
 
                                 <div class="col-md-6" style="text-align:start;">
-                                   <a href=""> <b> المزيد</b></a>
+                                   <b class="headersports">  {{ __('scwash') }}</b>
 
                                 </div>
                                 <div class="col-md-6" style="text-align:end;">
-                                            <b>اسكواش </b>
+                                    <a href="v_qat?id=5"> <b> {{ __('more') }}</b></a>
+
                                 </div>
 
                             </div>
@@ -349,7 +373,10 @@
                                             </div>
                                             <div class="name_studum">
                                                <h3> <a style="color: black" href="resev?id={{  $std->id_ }}">{{ $std->name }}</a></h3>
-                                                <b><i class="ri-star-line"></i></b>
+                                               <b style="text-align:left;position: relative;
+                                               left: -63px;
+                                               top: -2px;">{{ __('pawend') }}</b><b style="position: relative;
+right: -39px;">{{ $std->prise }}</b>
                                             </div>
                                         </div>   
                                 </div>
@@ -387,11 +414,12 @@
                             <div class="row">
 
                                 <div class="col-md-6" style="text-align:start;">
-                                  <a href="">  <b> المزيد</b></a>
+                                    <b class="headersports"> {{ __('volyball') }}</b>
 
                                 </div>
                                 <div class="col-md-6" style="text-align:end;">
-                                            <b>كرة الطائرة </b>
+                                    <a href="v_qat?id=6">  <b> {{ __('more') }}</b></a>
+
                                 </div>
 
                             </div>
@@ -410,7 +438,10 @@
                                             </div>
                                             <div class="name_studum">
                                                <h3> <a style="color: black" href="resev?id={{  $std->id_ }}">{{ $std->name }}</a></h3>
-                                                <b><i class="ri-star-line"></i></b>
+                                               <b style="text-align:left;position: relative;
+                                               left: -63px;
+                                               top: -2px;">{{ __('pawend') }}</b><b style="position: relative;
+right: -39px;">{{ $std->prise }}</b>
                                             </div>
                                         </div>   
                                 </div>

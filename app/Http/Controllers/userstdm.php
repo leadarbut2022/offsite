@@ -157,7 +157,7 @@ public function loginuser(Request $request){
               $request->session()->put('mail_std',$userinfo->email);
         
               $addstdstats=std_std::where('id_user','=',$userinfo->id)->first();
-              $request->session()->put('stat_std_add',$addstdstats->id_);
+              $request->session()->put('stat_std_add',@$addstdstats->id_);
 
 
             //   if($request->has('remember_me')){
@@ -190,10 +190,21 @@ public function signOut(){
     if (Session()->has('loged_std')) {
         Session()->pull('loged_std');
         
-        Session::flush();
-        
-        return redirect('login-stadium');
+        // Session::flush();
+        session()->forget([
+            'loged_std',
+            'name_std',
+            'phone_std',
+            'mohfza_std',
+            'city__std',
+            'ather_infoirmu_std',
+            'mail_std',
+            'stat_std_add'
+        ]);
+        return redirect('/');
     }
+    return redirect('/');
+
   }
 
 

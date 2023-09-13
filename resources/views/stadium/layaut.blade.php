@@ -143,7 +143,7 @@
         </div>
         <div class="col-md-3" style="   height: 940px; ">
             <div class="butt_right">
-                <a href="dashbord">
+                <a href="dashbord_std">
                 <button style="color:; background-color: none;" id="req_chin" onclick="req_chin()">
                     <h6><img style="    width: 29px;
                         " src="img/home.png" alt=""></h6>

@@ -1,5 +1,23 @@
+@import url(https://fonts.googleapis.com/earlyaccess/amiri.css);
+  /* font-family: 'Amiri', serif; */
+  
+  @import url(https://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
+  /*font-family: 'Droid Arabic Naskh', serif;*/
+  
+  @import url(https://fonts.googleapis.com/earlyaccess/lateef.css);
+  /* font-family: 'Lateef', serif; */
+  
+  @import url(https://fonts.googleapis.com/earlyaccess/scheherazade.css);
+  /*font-family: 'Scheherazade', serif;*/
+  
+  @import url(https://fonts.googleapis.com/earlyaccess/thabit.css);
+  /* font-family: 'Thabit', serif; */
 
 /*         nav bar*/
+
+*{
+    font-family: 'Droid Arabic Naskh', serif; 
+}
 .LIST_NAV{
     margin-top: -8px;
     width: 100%;
@@ -14,9 +32,9 @@
 
 .LIST_NAV .ul_1{
     position: relative;
-    /* left: 510px; */
-    width: 228%;
-}
+    left: 17px;
+    width: 275%;
+}    
 .LIST_NAV .ul_1 .li_1{
    margin: 0px 3px;
     height: 75px;
@@ -33,8 +51,8 @@
 
 .LIST_NAV .ul_1 .li_1:hover .a_1{
      
-    color: #163A5F;
-    background-color: #ffffff;
+    /*color: #163A5F;*/
+    /*background-color: #ffffff;*/
 
  }
 
